@@ -1,6 +1,5 @@
 module.exports = function(mongoose, Checkout, Movie) {
 	// Which users checked out any of the Lord of the Rings trilogy?
-	var userAns = "The following users checked out a 'Lord of the Rings' movie: ";
 	Movie.find(
 		{title : {$regex : "Lord of the Rings:"}},
 		function(err, data){
